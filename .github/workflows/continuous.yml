@@ -68,7 +68,7 @@ jobs:
 
       - name: Build (Release)
         if: matrix.config == 'Release'
-        run: python setup.py build install
+        run: python setup.py bdist_wheel
         
       - name: Upload Build Artifact
         if: always() 
@@ -79,4 +79,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: build-artifact-${{ matrix.name }}-${{ matrix.config }}
-          path: build/
+          path: dist/
