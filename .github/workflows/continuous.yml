@@ -23,15 +23,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, macOS-13, windows-2019]
+        os: [windows-2025]
         config: [Debug, Release]
         include:
-          - os: ubuntu-22.04
-            name: Linux
-          - os: windows-2019
+          - os: windows-2025
             name: Windows
-          - os: macos-13
-            name: macOS
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
