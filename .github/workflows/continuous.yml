@@ -48,7 +48,7 @@ jobs:
           activate-environment: test-env
 
       - name: Install Dependencies
-        run: conda install numpy svgwrite cmake git -y
+        run: conda install numpy svgwrite cmake==3.28.0 git -y
 
       - name: Install Dependencies  (Windows)
         if: runner.os == 'Windows'
