@@ -23,10 +23,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-2025]
+        os: [windows-2022]
         config: [Debug, Release]
         include:
-          - os: windows-2025
+          - os: windows-2022
             name: Windows
     steps:
       - name: Checkout repository
